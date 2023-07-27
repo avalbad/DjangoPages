@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> wellcome too my bloge kobs kobs</h1>
+<hr>
+<ul>
+{% for blog in object_list %}
+    <li>
+        <a href="{{blog.get_absolute_url}}">{{blog.title}}</a>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
